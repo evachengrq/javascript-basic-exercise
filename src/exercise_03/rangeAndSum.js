@@ -35,5 +35,11 @@ export function sum(...numbers) {
   // * Please implement this function and pass all the tests in range_and_array_spec.js.
   // * Please do NOT modify the signature of the function.
 
-  throw new Error('Please delete this line and implement the function');
+  if (numbers === null || numbers === undefined || numbers.length === 0) {
+    return 0;
+  }
+  if (numbers.length === 1) {
+    return numbers[0];
+  }
+  return numbers.reduce((prev, current) => prev + current, 0);
 }
